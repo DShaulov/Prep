@@ -14,16 +14,7 @@ class Solution:
                         longestPalindrome = s[i:j]
         return longestPalindrome
     def isPalindrome(self, s: str) -> bool:
-        left = 0
-        right = -1
-        stringLength = len(s)
-        for i in range(stringLength):
-            if s[left] == s[right]:
-                if (left + abs(right) == stringLength or left + abs(right) == stringLength - 1):
-                    return True
-                left += 1
-                right -= 1    
-        return False
+        return s == s[::-1]     
 
 if __name__ == "__main__":
     sol = Solution()
